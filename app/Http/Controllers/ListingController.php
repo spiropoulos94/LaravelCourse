@@ -15,11 +15,15 @@ class ListingController extends Controller
 
         // px request('tag') gia na pareis to value tou tag
         // px request(['tag', 'name']) gia na pareis ena array pou tha exei mesa [ tag=>'', name=>'' ]
-        dd(request('tag'));
+        // dd(request(412421));
+        // dd(request(['tag', 'search'],));
 
         return view('listings.index', [
             "heading" => "Latest Listings",
-            "listings" => Listing::latest()->filter(request(['tag']))->get(),
+            "listings" => Listing::latest()
+                // ->search(request('search'))
+                ->filter(request(['tag', 'search']))
+                ->get(),
         ]);
     }
 
