@@ -25,7 +25,8 @@ class ListingController extends Controller
             "listings" => Listing::latest()
                 // ->search(request('search'))
                 ->filter(request(['tag', 'search']))
-                ->get(),
+                // ->get(),
+                ->paginate(2), // xwris params ta gyrnaei ola ta listings
         ]);
     }
 
