@@ -62,7 +62,7 @@ class ListingController extends Controller
             $formFields['logo'] = "fasgbajsgbliasdgasd";
         }
 
-        $formFields['logo'] = "skata";
+        // $formFields['logo'] = "skata";
 
         // dd($formFields);
 
