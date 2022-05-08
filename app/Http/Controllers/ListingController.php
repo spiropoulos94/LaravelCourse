@@ -59,8 +59,10 @@ class ListingController extends Controller
         ]);
 
         if ($request->hasFile('logo')) {
-            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+            $formFields['logo'] = "fasgbajsgbliasdgasd";
         }
+
+        $formFields['logo'] = "skata";
 
         // dd($formFields);
 
