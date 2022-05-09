@@ -27,7 +27,8 @@ use App\Models\Listing;
 // update - Update listing
 // destroy - Delete listing
 
-
+// des ti kanei to ::class
+// dd(ListingController::class); = "App\Http\Controllers\ListingController"
 
 // All listings
 Route::get('/', [ListingController::class, 'index']);
