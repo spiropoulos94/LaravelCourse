@@ -74,7 +74,6 @@ class ListingController extends Controller
     // show edit form
     public function edit(Listing $listing)
     {
-        // dd($listing);
         return view('listings.edit', [
             "listing" => $listing,
         ]);
