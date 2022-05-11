@@ -60,4 +60,4 @@ Route::get('/register', [UserController::class, 'create']);
 Route::post('/user', [UserController::class, 'store']);
 
 // Log user out
-Route::post('/logout', [UserController::class, 'store']);
+Route::post('/logout', [UserController::class, 'logout']);
