@@ -11,4 +11,9 @@ class UserController extends Controller
     {
         return view('users.register');
     }
+
+    public function store()
+    {
+        dd(request()->all());
+    }
 }
