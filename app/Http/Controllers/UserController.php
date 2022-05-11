@@ -50,4 +50,10 @@ class UserController extends Controller
 
         return redirect('/')->with('message', 'Logged out!');
     }
+
+    //Show login from
+    public function login()
+    {
+        return view('users.login');
+    }
 }
