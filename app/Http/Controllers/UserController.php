@@ -33,4 +33,21 @@ class UserController extends Controller
 
         return redirect('/')->with('message', 'User created and logged in!');
     }
+
+    public function show(User $user)
+    {
+        return view('users.show', [
+            "user" => $user,
+        ]);
+    }
+
+    public function logout(Request $request)
+    {
+        auth()->logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/')->with('message', 'Logged out!');
+    }
 }
