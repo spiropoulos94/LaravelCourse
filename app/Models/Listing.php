@@ -39,4 +39,10 @@ class Listing extends Model
     //         $query->where('title', 'like', '%' . $searchParam . '%');
     //     }
     // }
+
+    // Relationship to user
+    public function user()
+    {
+        return $this->belongsTo(User::class, "user_id");
+    }
 }
